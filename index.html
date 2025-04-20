@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwindcss -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- alpineJS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!-- google fonts icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=psychology" />
+  </head>
+  <body x-data="{open: true}" class="bg-[url('img/bg1.svg')]">
+
+    <header>
+      <div class="w-full z-50 backdrop-blur-lg items-center px-10 fixed py-5  shadow-md font-[poppins] font-extrabold flex justify-center">
+        <div class="logo flex items-center justify-center gap-4">
+          <span class="p-2 rounded-full bg-slate-500/22"><img class="w-8 h-8" src="img/ith.png" alt="logo-hcc.png"></span>
+          <div class="logo-hcc flex items-center justify-center gap-1">
+            <img class="w-10" src="img/logo.png" alt="logo-hcc.png">
+            <a class="text-blue-900" href="https://www.instagram.com/codingclub.ith/">CODINGCLUB.ITH</a>
+          </div>
+        </div>
+        <div class="link font-normal hidden md:block">
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-40 mx-auto relative max-w-[1370px]">
+      <section x-data="community" x-show="open">
+        <div class="w-25  flex h-25 bg-yellow-200/50 rounded-full absolute backdrop-blur-sm -left-1 md:top-40 top-30"></div>
+        <div class="w-20  flex h-20 bg-emerald-300/30 rounded-full absolute backdrop-blur-sm left-30 md:top-148 top-295"></div>
+        <div class="w-25 h-25 bg-violet-500/30 rounded-full absolute -right-0 backdrop-blur-sm top-100"></div>
+        <div class="w-full flex items-center gap-20 flex-col lg:flex-row px-7">
+          <!-- side satu  -->
+          <div class="w-full  lg:w-1/2 lg:order-2 p-5 backdrop-blur-sm shadow-lg bg-blue-100/50 rotate-2 border-5 border-dashed rounded-xl border-blue-300 flex flex-col gap-16">
+            <div class="w-full flex justify-end pr-3 pt-3 items-end">
+              <span class="p-1 rounded-full shadow-lg rotate-3 bg-white">
+                <img class="w-8 h-8" src="img/html.svg" alt="">
+              </span>
+            </div>
+            <div class="p-10">
+              <h1 class="font-[roboto_mono] text-blue-400 md:text-4xl text-xl font-extrabold">Your Daily Quiz <span class="text-slate-500">Dose—Fresh from the API.</span></h1>
+            </div>
+            <div class="flex justify-start pb-3 pl-3">
+              <span class="p-1 bg-white rounded-full shadow-lg">
+                <img class="w-8 h-8" src="img/brain.svg" alt="">
+              </span>
+            </div>
+          </div>
+          <!-- end sisi satu -->
+
+          <!-- side dua -->
+          <div class="w-full lg:w-1/2 flex flex-col gap-5 h-auto">
+            <div class="flex p-5 items-center backdrop-blur-md -rotate-2 border-4 border-dashed rounded-xl border-blue-300">
+              <div class="h-[300px] p-10 flex items-start justify-center flex-col ">
+                <h1 class="text-5xl font-[1000] font-mono text-blue-400">BYTE</h1>
+                <blockquote class="text-xl md:text-4xl text-slate-500 font-bold font-[roboto_mono]">
+                  Building Your Tech <span class="text-blue-400">Expertise</span>
+                </blockquote>
+              </div>
+            </div>
+            <div class="w-full mt-5 font-[roboto_mono] border-l-[5px] border-violet-400 shadow-lg flex rounded-md p-5 bg-violet-300/50 backdrop-blur-md">
+              <div class="text-slate-600 text-lg mx-auto">
+                <span class="font-medium text-xl italic">"Innovate With Code, Build With Passion"</span>
+              </div>
+            </div>
+            <div @click="open = !open" class="w-full font-[roboto_mono] font-extrabold  backdrop-blur-sm shadow-lg duration-200 cursor-pointer p-3 text-center hover:scale-[1.03] bg-blue-300/70 rounded-md hover:bg-blue-500/50">
+              <button class="cursor-pointer">&raquo; Start Quiz &laquo;</button>
+          <!-- end side dua -->
+        </div>
+      </section>
+
+      <section x-show="open" x-data="community">
+        <!-- komunitas kami -->
+        <div class="komunitas mt-20  px-7">
+          <span class="px-16 p-5 shadow-lg backdrop-blur-md rounded-lg bg-white   font-[poppins] text-xl font-bold md:text-3xl">Komunitas <span class="text-blue-400">Kami</span></span>
+
+          <div class="max-w-screen-md mx-auto mt-16 md:text-xl bg-blue-300/30 p-5 font-[poppins] font-extralight backdrop-blur-sm  border-l-8 border-blue-400">
+            <blockquote>
+              Perluas jaringanmu dengan sesama programmer melalui diskusi, berbagi pengetahuan, dan kolaborasi dalam berbagai kegiatan komunitas.
+            </blockquote>
+          </div>
+
+          <div class="daftar-komunitas flex flex-col gap-5 md:flex-row mt-10 text-2xl">
+            <template x-for="kts in komunitas">
+              <div class="border-3 bg-white flex flex-col gap-5  duration-300 hover:-translate-y-2 shadow-md border-blue-300 w-full p-5 rounded-2xl">
+                <img class="w-[2em] bg-blue-100 p-2 rounded-full" :src="`${kts.img}`" alt="">
+                <div class="">
+                  <h1 class="font-[roboto_mono] font-bold" x-text="kts.title"></h1>
+                  <p class="font-[poppins] font-light text-lg" x-text="kts.body"></p>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+        <!-- end section komunitas -->
+         
+        <!-- feature -->
+        <div class="komunitas mt-20  px-7">
+          <span class="px-16 p-5 shadow-lg backdrop-blur-md rounded-lg bg-white  font-[poppins] text-xl font-bold md:text-3xl">Fitur <span class="text-blue-400">Unggulan</span></span>
+
+          <div class="max-w-screen-md mx-auto mt-16 md:text-xl bg-yellow-300/15 p-5 font-[poppins] font-extralight backdrop-blur-sm  border-r-8 border-yellow-400">
+            <blockquote>
+              Bergabung dengan ratusan mahasiswa Institut Teknologi Bacharuddin Jusuf Habibie dalam satu Habibie Coding Club dan rasakan manfaatnya.
+            </blockquote>
+          </div>
+
+          <div class="daftar-komunitas flex flex-col gap-5 md:flex-row mt-10 text-2xl">
+            <template x-for="kts in features">
+              <div class="border-3 bg-white flex flex-col gap-5  duration-300 hover:-translate-y-2 shadow-md border-blue-300 w-full p-5 rounded-2xl">
+                <img class="w-[2em] bg-blue-100 p-2 rounded-full" :src="`${kts.img}`" alt="">
+                <div class="">
+                  <h1 class="font-[roboto_mono] font-bold" x-text="kts.title"></h1>
+                  <p class="font-[poppins] font-light text-lg" x-text="kts.body"></p>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+        <!-- end feature -->
+      </section>
+
+      
+      
+      <!-- Quiz section -->
+      <section x-data="community" x-init="fetchQuestions()" x-show="!open" class="mb-40 font-[poppins]">
+        <!-- liat :class di bawa ini,, gunanya kalo selesai mi quiz, langsung hilangkan tampilannya, mau diganti sama papan score -->
+        <div :class="{'hidden' : currrentQuestion == 10}" class="quiz max-w-screen-md mx-auto  border p-5 flex flex-col  gap-4 border-t rounded-md bg-white">
+          <div class="flex flex-col gap-3">
+            <h1 class="hover:text-green-500">Please Answer questions below!</h1>
+            <span>Score: <span x-text="score"></span></span>
+            <span>Question: <span x-text="currrentQuestion + 1"></span>/10</span>
+          </div>
+          <hr>
+          <div class="question">
+            <span x-text="questions[currrentQuestion].question"></span>
+          </div>
+          <div class="anwswer">
+            <ol class="flex flex-col gap-3" type="A">
+              <template x-for="(opt, index) in choices" :key="index">
+                <!-- Logika untuk cek jawaban benar/salah -->
+                <li x-text="opt" :class="
+                  {
+                    'bg-green-300': answered && opt === questions[currrentQuestion].correct_answer,
+                    'bg-red-300': answered && selected === opt && opt !== questions[currrentQuestion].correct_answer
+                  }"
+                  @click="if (!answered) { selected = opt; answered = true; updateScore(selected)}"
+                 class="p-3 border rounded-md cursor-pointer hover:scale-[1.02] duration-300"></li>
+              </template>
+              <!-- end logika untuk cek jawaban benar/salah -->
+            </ol>
+          </div>
+          <button @click="next()"  class="w-full cursor-pointer p-3 bg-blue-300 block text-center rounded-md mt-4 hover:bg-blue-500 hover:text-white duration-300">Next</button>
+        </div>
+
+        <!-- ini section untuk papan score, kalo selesai mi quiz, ini yang tampil -->
+        <template x-if="currrentQuestion == 10">
+          <div class="flex flex-col items-center gap-10">
+            <span class="bg-blue-300/30 backdrop-blur-sm shadow-lg rounded-lg py-1 px-3">
+              <h1 class="text-4xl font-extrabold">Quiz Finised!</h1>
+            </span>
+            <div class="w-4/5 md:max-w-lg mx-auto flex flex-col items-center justify-center text-2xl rounded-lg py-10  border-blue-400 bg-white border-4  border-dashed">
+              <div class="flex flex-col justify-center items-center gap-3">
+                <h1>Your Score :</h1>
+                <span class="text-5xl" x-text="`${score}/10`"></span>
+                <span x-text="getResultTitle()" class="text-xl font-bold text-blue-400"></span>
+                <a class="bg-slate-500/20 py-3  rounded-lg mt-4 px-9" href="/">Main lagi</a>
+              </div>
+            </div>
+          </div>
+        </template>
+        <!-- end section papan score -->
+      </section>
+      <!-- end quiz section -->
+    </main>
+
+    <!-- footer cuy -->
+    <footer x-show="open" class="bg-gray-800 text-white py-8 mt-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Habibie Coding CLub</h3>
+            <p class="text-sm text-gray-300">Inovate with code, build with passion</p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-2">Activity</h4>
+            <ul class="space-y-1 text-gray-400 text-sm">
+              <li><a href="" class="hover:text-white">Ngoding</a></li>
+              <li><a href="" class="hover:text-white">Sharing</a></li>
+              <li><a href="" class="hover:text-white">Discuss</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-2">Bahasa</h4>
+            <ul class="space-y-1 text-gray-400 text-sm">
+              <li><a href="https://www.w3schools.com/html/" class="hover:text-white">HTML</a></li>
+              <li><a href="https://www.w3schools.com/css/" class="hover:text-white">CSS</a></li>
+              <li><a href="https://www.w3schools.com/js/" class="hover:text-white">Js</a></li>
+              <li><a href="https://alpinejs.dev/start-here" class="hover:text-white">AlpineJS</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-2">Ikuti Kami</h4>
+            <div class="flex items-center justify-start space-x-4">
+              <a class="flex flex-col items-center justify-center" href=""><img class="w-10" src="img/foot-ig.svg" alt="instagram">Instagram</a>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-700 pt-4 text-sm text-gray-400 text-center">
+          &copy; 2025 Habibie Coding Club. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
