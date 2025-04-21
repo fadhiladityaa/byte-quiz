@@ -4,17 +4,20 @@ document.addEventListener('alpine:init', () => {
        {
          title: 'Diskusi Langsung', 
          body: 'Bertemu dan diskusi langsung, berbagi ilmu seputar dunia pemrograman ataupun diluar daripada itu.', 
-         img: 'img/user.svg'
+         img: 'img/user.svg',
+         ling: ''
        },
        {
          title: 'Instagram', 
          body: 'Ikuti kami di instagram untuk mendapatkan tips-tips pemrograman dan seputar informasi tentang Habibie Coding Club.', 
-         img: 'img/instagram.svg'
+         img: 'img/instagram.svg',
+         ling: 'https://www.instagram.com/codingclub.ith/'
        },
        {
          title: 'Discord', 
          body: 'Diskusi dimanapun anda berada dengan menggunakan discord', 
-         img: 'img/dc.svg'
+         img: 'img/dc.svg',
+         ling: 'https://discord.gg/p3KwEzR4',
        }
      ],
      features: [

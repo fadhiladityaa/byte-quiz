@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,13 +16,19 @@
   </head>
   <body x-data="{open: true}" class="bg-[url('img/bg1.svg')]">
 
-    <header>
+    <header id="home">
       <div class="w-full z-50 backdrop-blur-lg items-center px-10 fixed py-5  shadow-md font-[poppins] font-extrabold flex justify-center">
         <div class="logo flex items-center justify-center gap-4">
-          <span class="p-2 rounded-full bg-slate-500/22"><img class="w-8 h-8" src="img/ith.png" alt="logo-hcc.png"></span>
+          <span class="p-2 rounded-full bg-slate-500/22">
+            <a href="#home">
+              <img class="w-8 h-8" src="img/ith.png" alt="logo-hcc.png">
+            </a>
+          </span>
           <div class="logo-hcc flex items-center justify-center gap-1">
-            <img class="w-10" src="img/logo.png" alt="logo-hcc.png">
-            <a class="text-blue-900" href="https://www.instagram.com/codingclub.ith/">CODINGCLUB.ITH</a>
+            <a href="#home">
+              <img class="w-10" src="img/logo.png" alt="logo-hcc.png">
+              <a class="text-blue-900" href="#">CODINGCLUB.ITH</a>
+            </a>
           </div>
         </div>
         <div class="link font-normal hidden md:block">
@@ -89,7 +95,7 @@
           <div class="daftar-komunitas flex flex-col gap-5 md:flex-row mt-10 text-2xl">
             <template x-for="kts in komunitas">
               <div class="border-3 bg-white flex flex-col gap-5  duration-300 hover:-translate-y-2 shadow-md border-blue-300 w-full p-5 rounded-2xl">
-                <img class="w-[2em] bg-blue-100 p-2 rounded-full" :src="`${kts.img}`" alt="">
+                <a :href="`${kts.ling}`"><img class="w-[2em] bg-blue-100 p-2 rounded-full" :src="`${kts.img}`" alt=""></a>
                 <div class="">
                   <h1 class="font-[roboto_mono] font-bold" x-text="kts.title"></h1>
                   <p class="font-[poppins] font-light text-lg" x-text="kts.body"></p>
@@ -170,7 +176,7 @@
                 <h1>Your Score :</h1>
                 <span class="text-5xl" x-text="`${score}/10`"></span>
                 <span x-text="getResultTitle()" class="text-xl font-bold text-blue-400"></span>
-                <a class="bg-slate-500/20 py-3  rounded-lg mt-4 px-9" href="/">Main lagi</a>
+                <a class="bg-slate-500/20 py-3 hover:bg-slate-400 hover:text-white duration-300 rounded-lg mt-4 px-9" href="/">&laquo; Kembali</a>
               </div>
             </div>
           </div>
@@ -197,18 +203,19 @@
             </ul>
           </div>
           <div>
-            <h4 class="text-lg font-semibold mb-2">Bahasa</h4>
+            <h4 class="text-lg font-semibold mb-2">Teknologi yang Digunakan</h4>
             <ul class="space-y-1 text-gray-400 text-sm">
               <li><a href="https://www.w3schools.com/html/" class="hover:text-white">HTML</a></li>
               <li><a href="https://www.w3schools.com/css/" class="hover:text-white">CSS</a></li>
               <li><a href="https://www.w3schools.com/js/" class="hover:text-white">Js</a></li>
               <li><a href="https://alpinejs.dev/start-here" class="hover:text-white">AlpineJS</a></li>
+              <li><a href="https://opentdb.com/" class="hover:text-white">Opentdb</a></li>
             </ul>
           </div>
           <div>
             <h4 class="text-lg font-semibold mb-2">Ikuti Kami</h4>
             <div class="flex items-center justify-start space-x-4">
-              <a class="flex flex-col items-center justify-center" href=""><img class="w-10" src="img/foot-ig.svg" alt="instagram">Instagram</a>
+              <a class="flex flex-col items-center justify-center" href="https://www.instagram.com/codingclub.ith/"><img class="w-10" src="img/foot-ig.svg" alt="instagram">Instagram</a>
               </a>
             </div>
           </div>
